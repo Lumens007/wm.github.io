@@ -1,0 +1,2448 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>用关怀顺应关怀</title>
+
+<meta charset="utf-8">
+<title>仿楼梯滚动打包</title>
+
+<script type="text/javascript" src="style/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="style/glt.js"></script>
+
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}
+body,html{
+	height: 100%;
+}
+#f1,#f2,#f3,#f4,#f5,#f6,#f7{
+	width: 100%;
+	height: auto;
+}
+#f1{
+	background-color: #FFF;
+}
+#f2{
+	background-color:#FFF;
+}
+#f3{
+	background-color:#FFF;
+}
+#f4{
+	background-color:#FFF;
+}
+#f5{
+	background-color:#FFF;
+}
+#f6{
+	background-color:#FFF;
+}
+#f7{
+	background-color:#FFF;
+}
+#h {
+	font-family: "Comic Sans MS", cursive;
+	font-size: 28px;
+	color: #c63;
+	text-align: center;
+	height: auto;
+	width: 1300px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	line-height: 53px;
+}
+#m {
+	text-align: center;
+	height: auto;
+	width: 1000px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#n {
+	font-family: "Comic Sans MS", cursive;
+	font-size: 28px;
+	color: #C63;
+	text-align: center;
+	height: auto;
+	width: 1300px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	line-height: 53px;
+}
+#o {
+	text-align: center;
+	height: auto;
+	width: 1000px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#p {
+	text-align: center;
+	height: auto;
+	width: 1000px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#q {
+	font-family: "Comic Sans MS", cursive;
+	font-size: 28px;
+	color: #C63;
+	text-align: center;
+	height: auto;
+	width: 1300px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	line-height: 53px;
+}
+#r {
+	text-align: center;
+	height: auto;
+	width: 1000px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;	
+}
+#s {
+	text-align: center;
+	height: auto;
+	width: 800px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;	
+}
+#t {
+	font-family: "Comic Sans MS", cursive;
+	font-size: 28px;
+	color: #C63;
+	text-align: center;
+	height: auto;
+	width: 1300px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	line-height: 53px;
+}
+#u {
+	text-align: center;
+	height: auto;
+	width: 1000px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#v {
+	font-family: "Comic Sans MS", cursive;
+	font-size: 28px;
+	color: #C63;
+	text-align: center;
+	height: auto;
+	width: 1300px;
+	margin-top: 80px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	line-height: 53px;
+}
+#w {
+	text-align: center;
+	height: 800px;
+	width: 1000px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#x {
+	font-family: "Comic Sans MS", cursive;
+	font-size: 28px;
+	color: #C63;
+	text-align: center;
+	height: auto;
+	width: 1300px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	line-height: 53px;
+}
+#y {
+	text-align: center;
+	height: 630px;
+	width: 1000px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#z {
+	text-align: center;
+	height: auto;
+	width: 1000px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#abc {
+	font-family: "Comic Sans MS", cursive;
+	font-size: 28px;
+	color: #C63;
+	text-align: center;
+	height: auto;
+	width: 1300px;
+	margin-top: 80px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	line-height: 53px;	
+}
+#def {
+	text-align: center;
+	height: auto;
+	width: 1000px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#hig {
+	text-align: center;
+	height: auto;
+	width: 1000px;
+	margin-top: 80px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;	
+}
+#aaa {
+	font-family: "Comic Sans MS", cursive;
+	font-size: 28px;
+	color: #C63;
+	text-align: center;
+	height: auto;
+	width: 1300px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	line-height: 53px;
+}
+#qqq {
+	font-size: 20px;
+	color: #000;
+	text-align: center;
+	height: auto;
+	width: 1300px;
+	margin-top: 80px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	border: 1px solid #333;
+}
+#sss {
+	font-size: 18px;
+	color: #000;
+	text-align: center;
+	width: 1300px;
+	margin-top: 40px;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid #333;
+}
+#fff {
+	font-family: "Comic Sans MS", cursive;
+	font-size: 24px;
+	color: #C63;
+	text-align: center;
+	float: left;
+	width: 1300px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#sss {
+	text-align: center;
+	height: auto;
+	width: 1000px;
+	margin-top: 80px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#rrr {
+	text-align: center;
+	height: auto;
+	width: 1000px;
+	margin-top: 80px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#uuu {
+	text-align: center;
+	height: auto;
+	width: 1000px;
+	margin-top: 80px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+</style>
+
+<style type="text/css">
+    * {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      border: 0;
+    }
+    
+    .all {
+      width: 1300px;
+      height: 650px;
+      padding: 7px;
+      border: 0px solid #ccc;
+      margin: 40px auto;
+      position: relative;
+    }
+#a {
+	font-family: "Comic Sans MS", cursive;
+	font-size: 28px;
+	color: #c63;
+	text-align: center;
+	height: auto;
+	width: 1300px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	line-height: 53px;
+}
+#b {
+	height: 550px;
+	width: 1300px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	font-family: "Comic Sans MS", cursive;
+	font-size: 24px;
+	color: #c63;
+	text-align: center;
+}
+#c {
+	text-align: center;
+	height: 630px;
+	width: 1000px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#f {
+	text-align: center;
+	height: auto;
+	width: 1000px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#g {
+	text-align: center;
+	height: auto;
+	width: 1000px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;	
+}
+#d {
+	text-align: center;
+	height: 600px;
+	width: 1000px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;	
+}
+#e {
+	font-family: "Comic Sans MS", cursive;
+	font-size: 28px;
+	color: #c63;
+	text-align: center;
+	height: auto;
+	width: 1300px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-bottom: 70px;
+	margin-left: auto;
+	line-height: 53px;
+}
+#b1 {
+	float: left;
+	height: 400px;
+	width: 550px;
+
+	margin-top: 70px;
+	margin-right: 10px;
+	margin-bottom: 50px;
+	margin-left: 65px;
+}
+	 .screen {
+      width: 1300px;
+      height: 650px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .screen li {
+      width: 1300px;
+      height: 650px;
+      overflow: hidden;
+      float: left;
+    }
+    
+    .screen ul {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 6500px;
+    }
+    
+    .all ol {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      line-height: 20px;
+      text-align: center;
+    }
+    
+    .all ol li {
+      float: left;
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border: 0px solid #ccc;
+      margin-left: 10px;
+      cursor: pointer;
+	  border-radius:50%;
+    }
+    
+    .all ol li.current {
+      background:#e66c4f;
+	  border-radius:50%;
+	  opacity: 0.5;
+    }
+    
+    #arr {
+      display: none;
+      z-index: 1000;
+      
+    }
+    
+    #arr span {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 5px;
+      top: 50%;
+      margin-top: -20px;
+      background: #000;
+      cursor: pointer;
+      line-height: 40px;
+      text-align: center;
+      font-weight: bold;
+      font-family: '黑体';
+      font-size: 30px;
+      color: #fff;
+      opacity: 0.3;
+      border: 1px solid #fff;
+	  border-radius:50%;
+    }
+    
+    #arr #right {
+      right: 5px;
+      left: auto;
+    }
+	
+
+#i {
+	font-family: "Comic Sans MS", cursive;
+	font-size: 32px;
+	color: #C63;
+	text-align: center;
+	height: auto;
+	width: 1300px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	line-height: 50px;
+}
+#j {
+	font-family: "Comic Sans MS", cursive;
+	font-size: 28px;
+	color: #C63;
+	text-align: center;
+	height: auto;
+	width: 1300px;
+	margin-top: 80px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	line-height: 53px;
+}
+#k {
+	text-align: center;
+	height: auto;
+	width: 1000px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#l {
+	font-family: "Comic Sans MS", cursive;
+	font-size: 28px;
+	color: #C63;
+	text-align: center;
+	height: auto;
+	width: 1300px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	line-height: 53px;
+}
+</style>
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<body onload="MM_preloadImages('image/5dabc7e90f698782d90464efc35bedf.jpg','image/a524fae9691830e5d8100cfcc8d1d9b.jpg')">
+
+
+<div id="f1">
+<div class="all" id='box'>
+  <div class="screen" id="screen">
+    <ul> <li>
+        <img src="image/cf67d9d713801bb44744052ba07f41f.jpg" alt=""width="1300" height="650"/>
+      </li>
+      <li>
+      <img src="image/5.gif" alt=""width="1300" height="650"/>
+      </li>
+      <li>
+        <img src="image/微信图片_20220307105151.jpg" alt=""width="1300" height="650"/>
+      </li>
+      <li>
+        <img src="image/微信图片_20220307105206.jpg" alt=""width="1300" height="650"/>
+      </li>
+      <li>
+          <img src="image/微信图片_20220307105212.jpg"width="1300" height="650"/>
+      </li>
+      
+    </ul>
+    <ol>
+    </ol>
+  </div>
+  <div id="arr">
+    <span id="left"><</span>
+    <span id="right">></span>
+  </div>
+</div>
+
+<script src="style/Untitled-2js.js"></script>
+
+<script>
+  //需求:
+  //        1. 根据ul中li的个数,动态的创建出ol中的li(数字按钮)
+  //          1.1 获取元素 ul, ul里面的li, ol
+  var screen = document.getElementById('screen');
+  var ul = screen.getElementsByTagName('ul')[0];
+  var lis = ul.children;
+  var ol = screen.getElementsByTagName('ol')[0];
+  var indexGlobal = 0; //用于存储当前展示的是哪张图片的下标
+
+
+ 
+
+  //          1.2 遍历ul里面的li
+  for (var i = 0; i < lis.length; i++) {
+    // 1.3 在遍历的过程中,动态的创建ol中的li,然后把新创建的li放到ol中
+    var li = document.createElement('li');
+    //由于点击的时候,需要获取当前li的下标,所以在创建的时候就存储一下
+    li.setAttribute('index', i);
+    // 1.4 给每一个数字按钮,添加数字
+    li.innerText = i + 1;
+    //1.5 默认一打开,展示第一个图片,所以要给数字按钮1默认高亮
+    if (i == 0) {
+//                    li.style.backgroundColor = 'yellow';
+      li.className = 'current';
+    }
+    ol.appendChild(li);
+    
+    
+    //       2. 点击数字按钮,让轮播图滚动(修改ul的left).
+    //        2.1 获取元素 ol里面的li
+    //        2.2 给每一个ol中的li注册点击事件
+    li.onclick = fn;
+  }
+
+  //要实现无缝轮播的效果,需要克隆第一张图放到最后面
+//  注意:一定要在数字按钮,创建完毕之后在克隆
+  var newone = lis[0].cloneNode(true);
+  ul.appendChild(newone);
+  console.log(lis);
+  
+  //        数字按钮li的事件处理函数
+  function fn() {
+    //  2.3 在事件处理函数中,修改ul的left
+//            2.3.1 目标值是多少?
+//                目标值 = 当前图片的下标 * 图片的宽度
+//                目标值 = 数字按钮的下标(this.getAttribute('index') * screen的宽度(screen.offsetWidth)
+//            console.log(this);
+    
+    var target = this.getAttribute('index') * screen.offsetWidth;
+//            2.3.2  将目标值赋值为ul, 注意值是负值
+//            ul.style.left = -target + 'px'; //直接到了目标位置
+    //我们需要慢慢滚动过去
+    animate(ul, -target, 20);
+//            2.4 点击哪个数字按钮,就让谁高亮
+    //排他
+    for (var i = 0; i < ol.children.length; i++) {
+      ol.children[i].className = '';
+
+    }
+    this.className = 'current';
+    
+//    /动态的修改indexGlobal的值,因为indexGlobal要时刻和展示的图片的下标保持一致
+    indexGlobal = this.getAttribute('index');
+    console.log(indexGlobal);
+    
+  }
+  
+  //3. 鼠标移入到box中,arr展示,鼠标移出到box外,arr消失
+  //3.1 获取元素
+  var box = document.getElementById('box');
+  var arr = document.getElementById('arr');
+  //        3.2 给box注册鼠标移入,移出事件
+  box.onmouseenter = function () {
+    //        3.3 移入事件,arr展示
+    arr.style.display = 'block';
+    
+    // 7.1 鼠标移入停止自动轮播
+    clearInterval(timeid);
+  }
+  box.onmouseleave = function () {
+    //        3.5 移出事件,arr消失
+    arr.style.display = 'none';
+    
+    //7.2 鼠标移出,开始自动轮播
+    timeid = setInterval(function(){
+      right.onclick();
+    }, 3000); //注意: 自动轮播的时间不能太短,因为图片滚动也需要时间
+  
+  
+  }
+  
+  //4. 点击右边的arr,滚动到下一张图
+  //        4.1 获取元素
+  var right = document.getElementById('right');
+  //        4.2 给right注册点击事件
+  right.onclick = function () {
+    //        4.3 在事件处理函数中,滚动到下一张图
+    //    4.3.1 当前是哪一张? 通过indexGlobal获取到当前的下标
+    // 4.4 判断当前是否是第5张图,如果是第5张图,就需要自己写代码,慢慢滚动到第6张
+    if(indexGlobal == ol.children.length - 1){
+      //证明是第5张,需要自己写代码,滚动过去,实现高亮
+//      4.4.1 滚动到第6张
+      indexGlobal++;
+      //计算展示第6张图,ul应该处于的位置
+      var target = indexGlobal * screen.offsetWidth;
+      animate(ul,-target, 20, function(){
+        //4.4.2 滚动到第6张之后,要立刻跳到第一张
+        ul.style.left = '0px';
+        //indexGlobal应该和展示的图片保持一致
+        indexGlobal = 0;
+      });
+      
+//      4.4.3 实现高亮
+      //排他
+      for (var i = 0; i < ol.children.length; i++) {
+        ol.children[i].className = '';
+      }
+      ol.children[0].className = 'current';
+      
+    }else{
+ 
+//    4.3.2 根据当前找到下一个数字按钮,触发数字按钮的点击事件
+      indexGlobal++;
+//    console.log(ol.children[indexGlobal]);
+      ol.children[indexGlobal].onclick();
+    }
+
+    
+    
+  
+  }
+  
+  
+  // 5. 点击左边的arr,滚动到上一张图
+//  5.1 获取元素
+    var left = document.getElementById('left');
+//  5.2 给left注册点击事件
+    left.onclick = function(){
+      //  5.3 在事件处理函数中,根据当前的图片,展示上一张
+      //5.3.1 判断当前展示的是不是第一张,如果是第一张,直接跳到最后一张,然后滚动到第5张
+      if(indexGlobal == 0){
+        //直接跳到最后一张
+        indexGlobal = ol.children.length;
+        ul.style.left = -indexGlobal * screen.offsetWidth + 'px';
+        //然后再滚动到第五张
+        indexGlobal--;
+        ol.children[indexGlobal].onclick();
+        
+      }else{
+        indexGlobal--;
+        ol.children[indexGlobal].onclick();
+      }
+    
+    }
+
+  
+// 6. 让轮播图自动轮播
+  var timeid = setInterval(function(){
+    right.onclick();
+  }, 3000); //注意: 自动轮播的时间不能太短,因为图片滚动也需要时间
+
+
+</script>
+<div id="a">
+  <p>根据运营商的统计数据
+    </p>
+  <p>目前我国仍有1.4亿老年人正在使用功能机    </p>
+  <p>银发网民面对数字鸿沟是一种怎样的尴尬呢？</p>
+  <p> 我们调查发现    </p>
+  <p>老年人数字鸿沟问题主要体现在三个方面：    </p>
+  <p>想用不会用    </p>
+  <p>会用不敢用</p>
+  <p> 以及不会用不愿用 </p>
+</div>
+<div id="b">
+  <div id="b1"><img src="image/3035853ad633b1bf2dab472d93f9cec.jpg" width="550" height="400" id="Image1" onmouseover="MM_swapImage('Image1','','image/5dabc7e90f698782d90464efc35bedf.jpg',1)" onmouseout="MM_swapImgRestore()" /></div>
+<div id="b1"><img src="image/7c63458bfc07a41b0884ee30f7fa1e1.jpg" width="550" height="400" id="Image2" onmouseover="MM_swapImage('Image2','','image/a524fae9691830e5d8100cfcc8d1d9b.jpg',1)" onmouseout="MM_swapImgRestore()" /></div>
+<div id="fff">（点此查看）</div>
+</div>
+<div id="i"><br>
+ 又或者，他们面对的问题远不止数字鸿沟</br>
+</div>
+</div>
+
+
+
+<div id="f2">
+  <div id="h"><p>
+  互联网络的接入标志着信息时代的到来</p>
+  <p>电子设备早已走进寻常百姓家</p>
+  <p>手机作为便捷和轻巧电子设备的代表</p>
+  <p>无疑成为百姓使用最多的设备</p>
+</div>
+
+   <div id="c"><meta charset="utf-8">
+<link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1"><style>#datatable {
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-size: 12px;
+}
+td,th {
+	border: 1px solid #ccc;
+	padding: 4px 20px;
+}</style>	<script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/data.js"></script>
+	<script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/themes/grid-light.js"></script>
+<!--
+*************************************************************************
+   Generated by JShare at 2022-03-22 20:37:29
+   From: https://jshare.com.cn/demos/hhhhDg?hc-theme=grid-light
+*************************************************************************
+ -->
+	<div id="container1" style="min-width: 310px; height: 450px; margin: 0 auto"></div>
+<p>数据表格</p>
+<table id="datatable1">
+	<thead>
+		<tr>
+			<th></th>
+			<th>2020</th>
+			<th>2021</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>台式电脑</th>
+			<td>32.8</td>
+			<td>35.0</td>
+		</tr>
+		<tr>
+			<th>笔记本电脑</th>
+			<td>28.2</td>
+			<td>33.0</td>
+		</tr>
+		<tr>
+			<th>手机</th>
+			<td>99.7</td>
+			<td>99.7</td>
+		</tr>
+		<tr>
+			<th>电视</th>
+			<td>24.0</td>
+			<td>28.1</td>
+		</tr>
+		<tr>
+			<th>平板电脑</th>
+			<td>22.9</td>
+			<td>27.4</td>
+		</tr>
+	</tbody>
+</table>
+	<script>
+	var chart = Highcharts.chart('container1', {
+	data: {
+		table: 'datatable1'
+	},
+	chart: {
+		type: 'column'
+	},
+	title: {
+		text: '互联网络接入设备使用情况'
+		// 该功能依赖 data.js 模块，详见https://www.hcharts.cn/docs/data-modules
+	},
+	subtitle: {
+		text: '数据来源：CNNIC中国互联网络发展状况统计调查'
+		// 该功能依赖 data.js 模块，详见https://www.hcharts.cn/docs/data-modules
+	},
+	yAxis: {
+		allowDecimals: false,
+		title: {
+			text: '单位：百分比'
+		}
+	},
+	tooltip: {
+		formatter: function () {
+			return '<b>' + this.series.name + '</b><br/>' +
+				this.point.y + ' 个' + this.point.name.toLowerCase();
+		}
+	}
+});</script></div>
+   <div id="uuu"><meta charset="utf-8">
+<link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">	<script src="https://code.highcharts.com.cn/jquery/jquery-1.8.3.min.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/highcharts-3d.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+	<script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+
+<!--
+*************************************************************************
+   Generated by JShare at 2022-03-24 21:30:41
+   From: https://jshare.com.cn/demos/hhhhDo
+*************************************************************************
+ -->
+	<div id="container8" style="width: 700px; height: 500px; margin: 0 auto"></div>
+<div id="sliders1">
+	
+</div>
+	<script>
+	var chart = new Highcharts.Chart({
+	chart: {
+		renderTo: 'container8',
+		type: 'column',
+		options3d: {
+			enabled: true,
+			alpha: 15,
+			beta: 15,
+			depth: 50,
+			viewDistance: 25
+		}
+	},
+	title: {
+		text: '老年网民使用互联网络接入设备情况'
+	},
+	subtitle: {
+		text: 'CNNIC中国互联网络发展状况统计调查  （单位：百分比）'
+	},
+	yAxis: {
+		min: 0,
+		max: 100,
+		title: null
+	},
+	xAxis: [{
+		categories: [
+			'手机', '电视', '台式电脑', '笔记本电脑', '平板电脑', '智能家居','可穿戴设备'
+		],
+		crosshair: true
+	}],
+	plotOptions: {
+		column: {
+			depth: 25
+		}
+	},
+	colors: [ '#F9A825', '#FBC02D', '#FDD835', '#FFEB3B'],
+	series: [{
+		name:'占比',
+		data: [99.5, 17.9, 17.7, 12.4, 12.2, 7.1, 5.9]
+	}]
+});
+// 将当前角度信息同步到 DOM 中
+var alphaValue = document.getElementById('alpha-value'),
+	betaValue = document.getElementById('beta-value'),
+	depthValue = document.getElementById('depth-value');
+function showValues() {
+	alphaValue.innerHTML = chart.options.chart.options3d.alpha;
+	betaValue.innerHTML = chart.options.chart.options3d.beta;
+	depthValue.innerHTML = chart.options.chart.options3d.depth;
+}
+// 监听 sliders 的变化并更新图表
+$('#sliders input').on('input change', function () {
+	chart.options.chart.options3d[this.id] = this.value;
+	showValues();
+	chart.redraw(false);
+});
+showValues();</script></div>
+   
+  
+  <div id="f"><meta charset="utf-8">
+<link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1"><style>#datatable {
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-size: 12px;
+}
+td,th {
+	border: 1px solid #ccc;
+	padding: 4px 20px;
+}</style>	<script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/data.js"></script>
+	<script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/themes/grid-light.js"></script>
+
+<!--
+*************************************************************************
+   Generated by JShare at 2022-03-09 18:16:08
+   From: https://jshare.com.cn/public/e0G62D?hc-theme=grid-light
+*************************************************************************
+ -->
+	<div id="container21" style="min-width: 310px; height: 450px; margin: 0 auto"></div>
+<p>数据表格</p>
+<table id="datatable21">
+	<thead>
+		<tr>
+			<th></th>
+			<th>APP</th>
+			<th>网站</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>2018年6月</th>
+			<td>421</td>
+			<td>544</td>
+		</tr>
+		<tr>
+			<th>2018年12月</th>
+			<td>452</td>
+			<td>523</td>
+		</tr>
+		<tr>
+			<th>2019年12月</th>
+			<td>367</td>
+			<td>497</td>
+		</tr>
+		<tr>
+			<th>2020年6月</th>
+			<td>359</td>
+			<td>468</td>
+		</tr>
+		<tr>
+			<th>2020年12月</th>
+			<td>345</td>
+			<td>443</td>
+		</tr>
+		<tr>
+			<th>2021年6月</th>
+			<td>302</td>
+			<td>422</td>
+		</tr>
+        <tr>
+			<th>2021年12月</th>
+			<td>252</td>
+			<td>418</td>
+		</tr>
+	</tbody>
+</table>
+	<script>
+	var chart = Highcharts.chart('container21', {
+	data: {
+		table: 'datatable21'
+	},
+	chart: {
+		type: 'column'
+	},
+	title: {
+		text: 'APP和网站数量'
+		// 该功能依赖 data.js 模块，详见https://www.hcharts.cn/docs/data-modules
+	},
+	subtitle: {
+		text: '数据来源：CNNIC中国互联网络发展状况统计调查<br>工业和信息化部 '
+		// 该功能依赖 data.js 模块，详见https://www.hcharts.cn/docs/data-modules
+	},
+	yAxis: {
+		allowDecimals: false,
+		title: {
+			text: '单位：万'
+		}
+	},
+	tooltip: {
+		formatter: function () {
+			return '<b>' + this.series.name + '</b><br/>' +
+				this.point.y + '万个' + this.point.name.toLowerCase();
+		}
+	}
+});</script></div>
+ 
+  <div id="e"> <p>手机作为人们上网的主要设备</p>
+  
+  <p>也在一定程度上促进了APP的研发
+</p>
+  
+  <p>各式各样的APP也为人们的生活</p>
+  
+  <p>提供了一种更便捷的方式 </p>
+ </div> 
+  <div id="d"><meta charset="utf-8">
+<link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">	<script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/themes/grid-light.js"></script>
+
+<!--
+*************************************************************************
+   Generated by JShare at 2022-03-22 20:47:58
+   From: https://jshare.com.cn/demos/CVSLGr?hc-theme=grid-light
+*************************************************************************
+ -->
+	<div id="container2" style="min-width:520px;height:520px"></div>
+	<script>
+	var chart = Highcharts.chart('container2', {
+	chart: {
+		spacing : [40, 0 , 40, 0]
+	},
+	title: {
+		floating:true,
+		text: 'APP分类占比'
+	},
+	subtitle: {
+		text: '数据来源：工业和信息化部'
+		// 该功能依赖 data.js 模块，详见https://www.hcharts.cn/docs/data-modules
+	},
+	colors: ['#F57F17', '#F9A825', '#FBC02D', '#FDD835', '#FFEB3B'],
+	tooltip: {
+		pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+	},
+	plotOptions: {
+		pie: {
+			allowPointSelect: true,
+			cursor: 'pointer',
+			dataLabels: {
+				enabled: true,
+				format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+				style: {
+					color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+				}
+			},
+			point: {
+				events: {
+					mouseOver: function(e) {  // 鼠标滑过时动态更新标题
+						// 标题更新函数，API 地址：https://api.hcharts.cn/highcharts#Chart.setTitle
+						chart.setTitle({
+							text: e.target.name+ '\t'+ e.target.y + ' %'
+						});
+					}
+					//, 
+					// click: function(e) { // 同样的可以在点击事件里处理
+					//     chart.setTitle({
+					//         text: e.point.name+ '\t'+ e.point.y + ' %'
+					//     });
+					// }
+				}
+			},
+		}
+	},
+	series: [{
+		type: 'pie',
+		innerSize: '80%',
+		name: '占比',
+		data: [
+			{name:'游戏类',   y: 28.2, url : 'http://bbs.hcharts.cn'},
+			['日常工具类',       15.4],
+			{
+				name: '电子商务类',
+				y: 9.8
+			},
+			['社交通讯类',    9.0],
+			['其他',     41.8]
+		]
+	}]
+}, function(c) { // 图表初始化完毕后的会掉函数
+	// 环形图圆心
+	var centerY = c.series[0].center[1],
+		titleHeight = parseInt(c.title.styles.fontSize);
+	// 动态设置标题位置
+	c.setTitle({
+		y:centerY + titleHeight/2
+	});
+});</script></div>
+</div>
+<div id="f3">
+<div id="j">
+  <p>根据世界卫生组织最新标准</p>
+  
+  <p>中年定义为45-59岁</p>
+ 
+  <p>老年定义为60岁及以上</p>
+  </div>
+  <div id="g"><meta charset="utf-8">
+<link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">	<script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+	<script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/themes/grid-light.js"></script>
+</head>
+<body>
+<!--
+*************************************************************************
+   Generated by JShare at 2022-03-22 21:07:20
+   From: https://jshare.com.cn/demos/hhhhDW?hc-theme=grid-light
+*************************************************************************
+ -->
+	<div id="container3" style="min-width:520px;height:460px"></div>
+	<script>
+	var chart = Highcharts.chart('container3', {
+	chart: {
+		zoomType: 'xy'
+	},
+	title: {
+		text: '手机网民规模及其占网民比例'
+	},
+	subtitle: {
+		text: '数据来源: CNNIC中国互联网络发展状况统计调查'
+	},
+		colors: [ '#F9A825',  '#FFEB3B'],
+
+	xAxis: [{
+		categories: ['2018.6', '2018.12', '2019.6', '2020.3', '2020.6', '2020.12',
+					 '2021.6', '2021.12'],
+		crosshair: true
+	}],
+	yAxis: [{ // Primary yAxis
+		labels: {
+			format: '{value}%',
+			style: {
+				color: Highcharts.getOptions().colors[1]
+			}
+		},
+		title: {
+			text: '占整体网民比例',
+			style: {
+				color: Highcharts.getOptions().colors[1]
+			}
+		}
+	}, { // Secondary yAxis
+		title: {
+			text: '手机网民规模',
+			style: {
+				color: Highcharts.getOptions().colors[0]
+			}
+		},
+		labels: {
+			format: '{value} 万人',
+			style: {
+				color: Highcharts.getOptions().colors[0]
+			}
+		},
+		opposite: true
+	}],
+	tooltip: {
+		shared: true
+	},
+	legend: {
+		layout: 'vertical',
+		align: 'left',
+		x: 120,
+		verticalAlign: 'top',
+		y: 100,
+		floating: true,
+		backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+	},
+	series: [{
+		name: '手机网民规模',
+		type: 'column',
+		yAxis: 1,
+		data: [78774, 81698, 84681, 89690, 93236, 98576, 100668, 102874],
+		tooltip: {
+			valueSuffix: ' 万人'}
+	}, {
+		name: '占整体网民比例',
+		type: 'spline',
+		data: [98.3, 98.6, 99.1, 99.3, 99.2, 99.7, 99.6, 99.7],
+		tooltip: {
+			valueSuffix: '%'
+		}
+	}]
+});</script></div>
+  <div id="k"><meta charset="utf-8">
+<link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">	<script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+	<script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+</head>
+<body>
+<!--
+*************************************************************************
+   Generated by JShare at 2022-03-14 23:18:59
+   From: https://jshare.com.cn/public/J0GXrz
+*************************************************************************
+ -->
+	<div id="container20" style="min-width:400px;height:400px"></div>
+	<script>
+	Highcharts.chart('container20', {
+	chart: {
+		plotBackgroundColor: null,
+		plotBorderWidth: null,
+		plotShadow: false,
+		type: 'pie'
+	},
+	title: {
+		text: '老年人使用智能手机情况'
+	},
+	subtitle: {
+		text: '数据来源：社会问卷调查'
+		// 该功能依赖 data.js 模块，详见https://www.hcharts.cn/docs/data-modules
+	},
+	colors: ['#F57F17', '#F9A825', '#FBC02D', '#FDD835', '#FFEB3B'],
+	tooltip: {
+		pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+	},
+	plotOptions: {
+		pie: {
+			allowPointSelect: true,
+			cursor: 'pointer',
+			dataLabels: {
+				enabled: true,
+				format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+				style: {
+					color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+				}
+			}
+		}
+	},
+	series: [{
+		name: '占比',
+		colorByPoint: true,
+		data: [{
+			sliced: true,
+			selected: true
+		}, {
+		}, {
+		}, {
+			name: '使用',
+			y: 53.73
+		}, {name: '不使用',
+			y:22.39
+		   }, {
+		   }, {
+			   name: '正在学习使用',
+			   y: 23.88
+		   }, {
+		   }, {
+		   }]
+	}]
+});</script></div>
+  <div id="l">
+  <p>老年人上网也逐渐常态化</p>
+  
+  <p>银发网民的规模和增速</p>
+ 
+  <p>也上升的越来越猛 </p>
+ 
+  <p>随着老龄化、城镇化的加剧</p>
+ 
+  <p>空巢老人持续增长</p>
+
+  <p>并且面临更多的生活问题</p>
+ 
+  <p>愈发需要网络应用</p>
+  <p>以一定程度地解决生活困难</p>
+ 
+  <p>同时</p>
+  
+  <p>疫情加速了全体网民线上化进程</p>
+  <p>也直接推动了银发网民往更深处入网 </p>
+ </div>
+  
+  <div id="m"><meta charset="utf-8">
+<link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">	<script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/themes/grid-light.js"></script>
+
+<!--
+*************************************************************************
+   Generated by JShare at 2022-03-16 11:59:01
+   From: https://jshare.com.cn/demos/CVSLGr?hc-theme=grid-light
+*************************************************************************
+ -->
+	<div id="container19" style="min-width:500px;height:500px"></div>
+	<script>
+	var chart = Highcharts.chart('container19', {
+	chart: {
+		spacing : [40, 0 , 40, 0]
+	},
+	title: {
+		floating:true,
+		text: '调查问卷老人年龄结构'
+	},
+	subtitle: {
+		text: '数据来源：社会问卷调查'
+		// 该功能依赖 data.js 模块，详见https://www.hcharts.cn/docs/data-modules
+	},
+	tooltip: {
+		pointFormat: '{series.name}: <b>{point.percentage:.2f}%</b>'
+	},
+	colors: ['#F57F17', '#F9A825', '#FBC02D', '#FDD835', '#FFEB3B'],
+	plotOptions: {
+		pie: {
+			allowPointSelect: true,
+			cursor: 'pointer',
+			dataLabels: {
+				enabled: true,
+				format: '<b>{point.name}</b>: {point.percentage:.2f} %',
+				style: {
+					color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+				}
+			},
+			point: {
+				events: {
+					mouseOver: function(e) {  // 鼠标滑过时动态更新标题
+						// 标题更新函数，API 地址：https://api.hcharts.cn/highcharts#Chart.setTitle
+						chart.setTitle({
+							text: e.target.name+ '\t'+ e.target.y + ' %'
+						});
+					}
+					//, 
+					// click: function(e) { // 同样的可以在点击事件里处理
+					//     chart.setTitle({
+					//         text: e.point.name+ '\t'+ e.point.y + ' %'
+					//     });
+					// }
+				}
+			},
+		}
+	},
+	series: [{
+		type: 'pie',
+		innerSize: '80%',
+		name: '占比',
+		data: [
+			{name:'60岁及以下',   y:24.88, url : 'http://bbs.hcharts.cn'},
+			['60-70岁',    37.81],
+			['70-80岁',     29.85],
+			['80岁及以上',   7.46]
+		]
+	}]
+}, function(c) { // 图表初始化完毕后的会掉函数
+	// 环形图圆心
+	var centerY = c.series[0].center[1],
+		titleHeight = parseInt(c.title.styles.fontSize);
+	// 动态设置标题位置
+	c.setTitle({
+		y:centerY + titleHeight/1
+	});
+});</script></div>
+</div>
+
+<div id="f4">
+  <div id="n">
+  <p>互联网的发展不断充实着老年人的生活</p>
+  <p>大部分的银发网民都对互联网保持着积极的态度</p>
+  <p>多方面的改变也优化着他们的使用感受</p>
+  <p>但是老年人面临的困难往往是更多的</p>
+  </div>
+  
+  <div id="o"><meta charset="utf-8">
+<link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">	<script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+	<script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/themes/grid-light.js"></script>
+
+<!--
+*************************************************************************
+   Generated by JShare at 2022-03-16 14:31:37
+   From: https://jshare.com.cn/demos/hhhhD1?hc-theme=grid-light
+*************************************************************************
+ -->
+	<div id="container18" style="min-width:450px;height:450px"></div>
+
+	<script>
+	// 创建渐变色
+Highcharts.getOptions().colors = Highcharts.map(Highcharts.getOptions().colors, function (color) {
+	return {
+		radialGradient: { cx: 0.5, cy: 0.3, r: 0.7 },
+		stops: [
+			[0, color],
+			[1, Highcharts.Color(color).brighten(-0.3).get('rgb')] // darken
+		]
+	};
+});
+// 构建图表
+var chart = Highcharts.chart('container18',{
+	title: {
+		text: '家庭内老年人对与学习使用智能手机的态度'
+	},
+	subtitle: {
+		text: '数据来源：社会问卷调查'
+		// 该功能依赖 data.js 模块，详见https://www.hcharts.cn/docs/data-modules
+	},
+	tooltip: {
+		pointFormat: '{series.name}: <b>{point.percentage:.2f}%</b>'
+	},
+	colors: ['#F57F17', '#F9A825', '#FBC02D', '#FDD835', '#FFEB3B'],
+	plotOptions: {
+		pie: {
+			allowPointSelect: true,
+			cursor: 'pointer',
+			dataLabels: {
+				enabled: true,
+				format: '<b>{point.name}</b>: {point.percentage:.2f} %',
+				style: {
+					color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+				},
+				connectorColor: 'silver'
+			}
+		}
+	},
+	series: [{
+		type: 'pie',
+		name: '占比',
+		data: [
+			['拒绝使用', 0.64],
+			['积极性很高',    54.49],
+			['积极性一般',     41.03],
+			['没有兴趣',    3.85]
+		]
+	}]
+});</script></div>
+  <div id="p"><meta charset="utf-8">
+<link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">	<script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/oldie.js"></script>
+	<script src="https://code.highcharts.com.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+
+<!--
+*************************************************************************
+   Generated by JShare at 2022-03-16 13:21:10
+   From: https://jshare.com.cn/demos/hhhhxu
+*************************************************************************
+ -->
+	<div id="container17" style="min-width:350px;height:500px"></div>
+
+	<script>
+	var chart = Highcharts.chart('container17', {
+	chart: {
+		type: 'line'
+	},
+	title: {
+		text: '老年人经常使用的智能手机软件'
+	},
+	subtitle: {
+		text: '数据来源:社会问卷调查'
+	},
+	colors: ['#F57F17', '#F9A825', '#FBC02D', '#FDD835', '#FFEB3B'],
+	xAxis: {
+		categories: ['聊天软件', '短视频软件', '电话短信', '支付宝', '浏览器软件', '购物软件', '音乐软件', '摄影美图软件', '外卖软件', '地图软件', '打车软件', '其他']
+	},
+	yAxis: {
+		title: {
+			text: '单位：百分比'
+		}
+	},
+	plotOptions: {
+		line: {
+			dataLabels: {
+				// 开启数据标签
+				enabled: true          
+			},
+			// 关闭鼠标跟踪，对应的提示框、点击事件会失效
+			enableMouseTracking: false
+		}
+	},
+	series: [{
+		name: '占比',
+		data: [91.67, 72.22, 68.52, 19.44, 11.11, 12.04, 5.56, 4.63, 4.63, 4.63, 0.93, 10.19]
+	}]
+});
+</script></div>
+  <div id="q">
+  <p>"一机在手，走遍天下"</p>
+  <p>这句话反映的内容早已成为现实</p>
+  <p>智能手机的问世</p>
+  <p>满足了人们大部分的需求</p>
+  <p>智能手机满足了银发老人跟家人沟通交流的需求</p>
+  <p>通过快手抖音看段子居家娱乐的需求</p>
+  <p>更是连看病挂号、特殊时期健康码的出示都满足了</p>
+  <p>银发老人，不再孤单和安静</p>
+  <p>他们通过互联网新媒体平台让自己变得更加快乐和时尚</p>
+  </div>
+  <div id="r"><meta charset="utf-8">
+<link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">	<script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+	<script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+
+<!--
+*************************************************************************
+   Generated by JShare at 2022-03-16 16:34:18
+   From: https://jshare.com.cn/demos/NPVyQW
+*************************************************************************
+ -->
+	<div id="container16"></div>
+
+	<script>
+	var chart = Highcharts.chart('container16', {
+	chart: {
+		type: 'column'
+	},
+	title: {
+		text: '老年人希望学习的智能手机功能'
+	},
+	subtitle: {
+		text: '数据来源：社会问卷调查'
+	},
+	colors: [ '#F9A825', '#FBC02D', ],
+	xAxis: {
+		categories: ['微信聊天', '接打电话', '调节屏幕亮度音量等', '收发短信', '看视频听音乐', '摄影摄像',
+					 '网上购物', '地图导航', '移动支付', '看病挂号', '网约打车', '餐饮外卖', '金融理财', '其他' ]
+	},
+	yAxis: {
+		labels: {
+			x: -15
+		},
+		title: {
+			text: '单位：百分比'
+		}
+	},
+	series: [{
+		name: '占比',
+		data: [87.5, 85.42, 77.08, 64.58, 39.58, 33.33, 18.75, 16.67, 14.58, 14.58, 8.33, 6.25, 4.17, 6.25]
+	}],
+	responsive: {
+		rules: [{
+			condition: {
+				maxWidth: 450
+			},
+			// Make the labels less space demanding on mobile
+			chartOptions: {
+				xAxis: {
+					labels: {
+						formatter: function () {
+							return this.value.replace('月', '')
+						}
+					}
+				},
+				yAxis: {
+					labels: {
+						align: 'left',
+						x: 0,
+						y: -2
+					},
+					title: {
+						text: ''
+					}
+				}
+			}
+		}]
+	}
+});
+function setSize(width) {
+	chart.setSize(width, 300);
+}</script></div>
+  <div id="s"><meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="icon" href="https://static.jianshukeji.com/hcode/images/favicon.ico">
+<style>#container {
+	min-width: 310px;
+	max-width: 600px;
+	height: 850px;
+	margin: 0 auto;
+}</style>	<script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/highcharts-more.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/oldie.js"></script>
+
+<!--
+*************************************************************************
+   Generated by JShare at 2022-03-16 15:24:09
+   From: https://jshare.com.cn/public/I0GXT8
+*************************************************************************
+ -->
+	<div id="container15"></div>
+	<script>
+	Highcharts.chart('container15', {
+	chart: {
+		type: 'columnpyramid'
+	},
+	title: {
+		text: '老年人使用智能手机的目的'
+	},
+	subtitle: {
+		text: '数据来源：社会调查问卷'
+		// 该功能依赖 data.js 模块，详见https://www.hcharts.cn/docs/data-modules
+	},
+	colors: ['#F57F17', '#F9A825', '#FBC02D', '#FDD835', '#FFEB3B'],
+	xAxis: {
+		crosshair: true,
+		labels: {
+			style: {
+				fontSize: '14px'
+			}
+		},
+		type: 'category'
+	},
+	yAxis: {
+		min: 0,
+		title: {
+			text: '单位：百分比'
+		}
+	},
+	tooltip: {
+		valueSuffix: ' %'
+	},
+	series: [{
+		name: '占比',
+		colorByPoint: true,
+		data: [
+			['信息交流', 89.74],
+			['消遣娱乐', 58.97],
+			['方便生活', 41.67],
+			['处理事务', 37.82],
+			['其他', 9.62]
+		],
+		showInLegend: false
+	}]
+});</script></div>
+  
+  <div id="rrr"><meta charset="utf-8">
+<link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">	<script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/highcharts-more.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+	<script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/themes/grid-light.js"></script>
+
+<!--
+*************************************************************************
+   Generated by JShare at 2022-03-24 21:04:49
+   From: https://jshare.com.cn/demos/hhhhic?hc-theme=grid-light
+*************************************************************************
+ -->
+	<div id="container7" style="min-width: 410px; max-width: 700px; height: 500px; margin: 0 auto"></div>
+	<script>
+	var chart = Highcharts.chart('container7', {
+	chart: {
+		type: 'waterfall'
+	},
+	title: {
+		text: '老年网民能够独立完成网络活动的比例'
+	},
+	subtitle: {
+		text: '数据来源：CNNIC中国互联网络发展状况统计调查'
+		// 该功能依赖 data.js 模块，详见https://www.hcharts.cn/docs/data-modules
+	},
+	tooltip: {
+		pointFormat: '{series.name}: <b>{point.percentage:.2f}%</b>'
+	},
+	xAxis: {
+		type: 'category'
+	},
+	yAxis: {
+		title: {
+			text: '单位：百分比'
+		}
+	},
+	legend: {
+		enabled: false
+	},
+	tooltip: {
+		pointFormat: ' <b>占比{point.y:,.2f}</b>% '
+	},
+	colors: [ '#FBC02D', '#FDD835', '#FFEB3B'],
+	series: [{
+		colors: ['#FBC02D', '#FDD835', '#FFEB3B'],
+		colors: [ '#FBC02D', '#FDD835', '#FFEB3B'],
+		data: [{
+			name: '出示健康码/行程卡',
+			y: 69.7
+		}, {
+			name: '购买生活用品',
+			y: 52.1
+		}, {
+			name: '查找信息（如地图）',
+			y: 46.2
+		},  {
+			name: '叫车出行',
+			y: 34.8
+		}, {
+			name: '订票（如门票、车票）',
+			y: 33.9
+		}, {
+			name: '使用网上挂号、问诊',
+			y: 33.0
+		}, {
+			name: '使用网上银行）',
+			y: 32.8
+		}],
+		dataLabels: {
+			enabled: true,
+			formatter: function () {
+				return Highcharts.numberFormat(this.y / 1, 1, ',') + '%';
+			},
+			style: {
+				color: '#FFFFFF',
+				fontWeight: 'bold',
+				textShadow: '0px 0px 3px black'
+			}
+		},
+		pointPadding: 0
+	}]
+});</script></div>
+
+  <div id="t">
+    <p>银发族在面对各类生活服务时</p>
+  <p>有主动触网需求</p>
+  <p>但作为大龄触网者</p>
+  <p>仍然存在许多障碍</p>
+ </div>
+  <div id="u"><meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="icon" href="https://static.jianshukeji.com/hcode/images/favicon.ico">
+<style>#container {
+	height: 550px;
+	width: 550px;
+	margin:auto
+}
+.highcharts-figure, .highcharts-data-table table {
+	min-width: 320px; 
+	max-width: 800px;
+	margin: 1em auto;
+}
+.highcharts-data-table table {
+	font-family: Verdana, sans-serif;
+	border-collapse: collapse;
+	border: 1px solid #EBEBEB;
+	margin: 10px auto;
+	text-align: center;
+	width: 100%;
+	max-width: 500px;
+}
+.highcharts-data-table caption {
+	padding: 1em 0;
+	font-size: 1.2em;
+	color: #555;
+}
+.highcharts-data-table th {
+	font-weight: 600;
+	padding: 0.5em;
+}
+.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+	padding: 0.5em;
+}
+.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+	background: #f8f8f8;
+}
+.highcharts-data-table tr:hover {
+	background: #f1f7ff;
+}
+.ld-label {
+	width:200px;
+	display: inline-block;
+}
+.ld-url-input {
+	width: 500px; 
+}
+.ld-time-input {
+	width: 40px;
+}
+</style>
+<!--
+*************************************************************************
+   Generated by JShare at 2022-03-23 18:26:52
+   From: https://jshare.com.cn/public/E0GXng/2
+*************************************************************************
+ -->
+	<script src="https://code.highcharts.com.cn/highcharts/highcharts.js"></script>
+<script src="https://code.highcharts.com.cn/highcharts/highcharts-more.js"></script>
+<script src="https://code.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+<script src="https://code.highcharts.com.cn/highcharts/modules/export-data.js"></script>
+<script src="https://code.highcharts.com.cn/highcharts/modules/accessibility.js"></script>
+<!-- Flag sprites service provided by Martijn Lafeber,
+https://github.com/lafeber/world-flags-sprite/blob/master/LICENSE -->
+<link rel="stylesheet" href="https://github.com/downloads/lafeber/world-flags-sprite/flags16.css" />
+<figure class="highcharts-figure">
+	<div id="container"></div>
+	<p class="highcharts-description">
+	</p>
+</figure>
+	<script>
+	Highcharts.chart('container', {
+	colors: ['#FFD700', ],
+	chart: {
+		type: 'column',
+		inverted: true,
+		polar: true
+	},
+	title: {
+		text: '老年人学习使用智能手机过程中遇到的困难'
+	},
+	subtitle: {
+		text: '数据来源：社会问卷调查  (单位：百分比)'
+	},
+	tooltip: {
+		outside: true
+	},
+	pane: {
+		size: '85%',
+		endAngle: 270
+	},
+	xAxis: {
+		tickInterval: 1,
+		labels: {
+			align: 'right',
+			useHTML: true,
+			allowOverlap: true,
+			step: 1,
+			y: 1,
+			style: {
+				fontSize: '12px'
+			}
+		},
+		lineWidth: 0,
+		categories: [
+			'操作复杂，难以掌握',
+			'软件广告较多，影响使用',
+			'视力记忆力等身体条件下降',
+			'误触',
+			'无法求助',
+			'其他',
+			'没有困难',
+			'语音无法识别',
+		]
+	},
+	yAxis: {
+		lineWidth: 0,
+		tickInterval: 25,
+		reversedStacks: false,
+		endOnTick: true,
+		showLastLabel: true
+	},
+	plotOptions: {
+		column: {
+			stacking: 'normal',
+			borderWidth: 0,
+			pointPadding: 0,
+			groupPadding: 0.15
+		}
+	},
+	series: [{
+		name: '占比',
+		data: [ 67.31, 48.72, 46.79,29.49, 17.31, 14.74,14.1, 10.9, ]
+	}]
+});</script></div>
+</div>
+
+<div id="f5">
+  <div id="v">
+<p>2020年末</p>
+<p>
+工业和信息化部要求</p>
+<p>
+应用软件进行适老化及无障碍改造</p>
+<p>
+并且提出首批要求进行</p>
+<p>
+适老化改造的名单 <img src="image/untitled.jpg" alt="" width="45" height="45" border="0" usemap="#Map" />
+<map name="Map" id="Map">
+  <area shape="rect" coords="0,12,46,33" href="files/Untitled-1.html" />
+</map>
+（点此查看）</p>
+<p>
+2022年1月末
+</p>
+<p>工业和信息化部</p>
+<p>
+  适老化及无障碍改造行动初步完成</p>
+<p>
+并且发布了首批通过评测的APP名单
+</p>
+<p> 共计51家平台的ios和安卓版本的APP <img src="image/untitled.jpg" alt="" width="45" height="45" border="0" usemap="#Map2" />
+  <map name="Map2" id="Map2">
+    <area shape="rect" coords="1,9,48,36" href="files/Untitled-2.html" />
+  </map>
+  （点此查看）
+</p>
+</div>
+  <div id="w"><meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="icon" href="https://static.jianshukeji.com/hcode/images/favicon.ico">
+<style>#container {
+	min-width: 320px;
+	max-width: 600px;
+	margin: 0 auto;
+}</style>	<script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/oldie.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/networkgraph.js"></script>
+
+<!--
+*************************************************************************
+   Generated by JShare at 2022-03-06 15:41:55
+   From: https://jshare.com.cn/public/p0G6vv
+*************************************************************************
+ -->
+	<div id="container13"></div>
+	<script>
+	// Add the nodes option through an event call. We want to start with the parent
+// item and apply separate colors to each child element, then the same color to
+// grandchildren.
+Highcharts.addEvent(
+	Highcharts.seriesTypes.networkgraph,
+	'afterSetOptions',
+	function (e) {
+		var colors = Highcharts.getOptions().colors,
+			i = 0,
+			nodes = {};
+		e.options.data.forEach(function (link) {
+			if (link[0] === '技术要求') {
+				nodes['技术要求'] = {
+					id: '技术要求',
+					marker: {
+						radius: 20
+					}
+				};
+				nodes[link[1]] = {
+					id: link[1],
+					marker: {
+						radius: 10
+					},
+					color: colors[i++]
+				};
+			} else if (nodes[link[0]] && nodes[link[0]].color) {
+				nodes[link[1]] = {
+					id: link[1],
+					color: nodes[link[0]].color
+				};
+			}
+		});
+		e.options.nodes = Object.keys(nodes).map(function (id) {
+			return nodes[id];
+		});
+	}
+);
+Highcharts.chart('container13', {
+	chart: {
+		type: 'networkgraph',
+		height: '100%'
+	},
+	title: {
+		text: '互联网网站适老化通用设计规范'
+	},
+	subtitle: {
+		text: '数据来源：工业和信息化部办公厅(关于进一步抓好互联网应用适老化及无障碍改造专项行动实施工作的通知）'
+	},
+	plotOptions: {
+		networkgraph: {
+			keys: ['from', 'to'],
+			layoutAlgorithm: {
+				enableSimulation: true
+			}
+		}
+	},
+	series: [{
+		dataLabels: {
+			enabled: true
+		},
+		data: [
+			['技术要求', '特别性要求'],
+			['技术要求', '可理解性'],
+			['技术要求', '可操作性'],
+			['技术要求', '可感知性'],
+			['技术要求', '兼容性'],
+			['可感知性', '标识与描述'],
+			['可感知性', '视觉呈现'],
+			['可感知性', '听觉感知'],
+			['可感知性', '非文本处理'],
+			['视觉呈现', '页面布局'],
+			['视觉呈现', '区域辨识'],
+			['视觉呈现', '字体大小'],
+			['视觉呈现', '焦点状态'],
+			['非文本处理','非文本链接'],
+			['非文本处理','非文本控本'],
+			['非文本处理','验证码'],
+			['非文本处理','验证码时效'],
+			['验证码','验证码放大'],
+			['验证码','验证码替代'],
+			['特别性要求', '口述网页结构服务'],
+			['特别性要求', '实时读屏服务'],
+			['特别性要求', '完整性服务'],
+			['兼容性', '兼容性要求'],
+			['兼容性', '界面组件'],
+			['界面组件','组件样式'],
+			['界面组件','组件服务'],
+			['可操作性', '可操作性要求'],
+			['可操作性', '操作接口'],
+			['操作接口','结构数据'],
+			['操作接口','接口开放'],
+			['可操作性', '多媒体控制'],
+			['可操作性', '广告插件及诱导类按键限制'],
+			['广告插件及诱导类按键限制','禁止广告插件'],
+			['广告插件及诱导类按键限制','禁止诱导类按键'],
+			['可操作性', '漂浮窗体控制'],
+			['漂浮窗体控制','漂浮窗体时机'],
+			['漂浮窗体控制','临时漂浮窗体'],
+			['可操作性', '信息输入处理'],
+			['信息输入处理','错误预防'],
+			['信息输入处理','区域辨识'],
+			['听觉感知', '语音阅读'],
+			['听觉感知', '阅读控制'],
+			['可理解性', '信息及表达操作'],
+			['信息及表达操作','专业词语与新词语'],
+			['信息及表达操作','交互的统一性'],
+			['信息及表达操作','识别的一致性'],
+			['信息及表达操作','位置告知和纠错'],
+			['标识与描述', '整体信息'],
+			['标识与描述', '区域性信息'],
+			['标识与描述', '关联性操作'],
+		]
+	}]
+});
+</script></div>
+  <div id="x"><p>适老化及无障碍改造围绕
+</p>
+<p>
+以人为本的人机交互
+</p>
+<p>
+提供多样的操作方式
+</p>
+<p>
+实现多样的推送形式
+</p>
+<p>
+形成多样的服务闭环
+</p>
+<p>
+四条基本原则
+</p>
+</div>
+  <div id="y"><meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="icon" href="https://static.jianshukeji.com/hcode/images/favicon.ico">
+<style>#container {
+	min-width: 320px;
+	max-width: 800px;
+	margin: 0 auto;
+}</style>	<script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/oldie.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/networkgraph.js"></script>
+
+<!--
+*************************************************************************
+   Generated by JShare at 2022-03-06 18:25:39
+   From: https://jshare.com.cn/demos/HIrD8k
+*************************************************************************
+ -->
+	<div id="container12"></div>
+	<script>
+	// Add the nodes option through an event call. We want to start with the parent
+// item and apply separate colors to each child element, then the same color to
+// grandchildren.
+Highcharts.addEvent(
+	Highcharts.seriesTypes.networkgraph,
+	'afterSetOptions',
+	function (e) {
+		var colors = Highcharts.getOptions().colors,
+			i = 0,
+			nodes = {};
+		e.options.data.forEach(function (link) {
+			if (link[0] === '技术要求') {
+				nodes['技术要求'] = {
+					id: '技术要求',
+					marker: {
+						radius: 20
+					}
+				};
+				nodes[link[1]] = {
+					id: link[1],
+					marker: {
+						radius: 10
+					},
+					color: colors[i++]
+				};
+			} else if (nodes[link[0]] && nodes[link[0]].color) {
+				nodes[link[1]] = {
+					id: link[1],
+					color: nodes[link[0]].color
+				};
+			}
+		});
+		e.options.nodes = Object.keys(nodes).map(function (id) {
+			return nodes[id];
+		});
+	}
+);
+Highcharts.chart('container12', {
+	chart: {
+		type: 'networkgraph',
+		height: '80%'
+	},
+	title: {
+		text: '移动互联网应用（APP）适老化通用设计规范'
+	},
+	subtitle: {
+		text: '数据来源：工业和信息化部办公厅(关于进一步抓好互联网应用适老化及无障碍改造专项行动实施工作的通知）'
+	},
+	plotOptions: {
+		networkgraph: {
+			keys: ['from', 'to'],
+			layoutAlgorithm: {
+				enableSimulation: true
+			}
+		}
+	},
+	series: [{
+		dataLabels: {
+			enabled: true
+		},
+		data: [
+			['技术要求', '安全性'],
+			['技术要求', '可理解性'],
+			['技术要求', '可操作性'],
+			['技术要求', '可感知性'],
+			['技术要求', '兼容性'],
+			['可感知性', '字体大小调整'],
+			['可感知性', '行间距'],
+			['可感知性', '对比度'],
+			['可感知性', '颜色用途'],
+			['可感知性', '验证码'],
+			['可操作性', '组件焦点大小'],
+			['可操作性', '手势操作'],
+			['可操作性', '充足操作时间'],
+			['可操作性', '浮窗'],
+			['可理解性', '提示机制'],
+			['兼容性', '辅助技术'],
+			['安全性', '广告插件及诱导类按键限制'],
+			['安全性', '保障老年用户个人信息安全'],
+			['广告插件及诱导类按键限制','禁止广告插件'],
+			['广告插件及诱导类按键限制','禁止诱导类按键'],
+			['广告插件及诱导类按键限制','禁止广告插件'],
+			['广告插件及诱导类按键限制','禁止诱导类按键'],
+		]
+	}]
+});
+</script></div>
+  <div id="z"><meta charset="utf-8">
+<link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">	<script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/highcharts-3d.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+	<script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+
+<!--
+*************************************************************************
+   Generated by JShare at 2022-03-16 14:15:53
+   From: https://jshare.com.cn/demos/hhhhiG
+*************************************************************************
+ -->
+	<div id="container11" style="height: 450px"></div>
+	<script>
+	var chart = Highcharts.chart('container11', {
+	chart: {
+		type: 'pie',
+		options3d: {
+			enabled: true,
+			alpha: 45,
+			beta: 0
+		}
+	},
+	title: {
+		text: '家庭内老年人是否接触过适老化版本的软件或网站'
+	},
+	subtitle: {
+		text: '数据来源：社会问卷调查'
+		// 该功能依赖 data.js 模块，详见https://www.hcharts.cn/docs/data-modules
+	},
+	tooltip: {
+		pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+	},
+	colors: ['#FBC02D', '#FDD835', ],
+	plotOptions: {
+		pie: {
+			allowPointSelect: true,
+			cursor: 'pointer',
+			depth: 35,
+			dataLabels: {
+				enabled: true,
+				format: '{point.name}'
+			}
+		}
+	},
+	series: [{
+		type: 'pie',
+		name: '占比',
+		data: [
+			['是50.64%',   50.64],
+			['否49.36%',  49.36]
+		]
+	}]
+});</script></div>
+  <div id="abc">
+<p>适老化是根据老年人需求对软件版本做出的调整改变</p>
+<p>接触适老化版本的人群已经占全体人群的50%以上</p>
+<p>但未接触人群依然占大多数</p>
+<p>适老化版本方便了老年人生活</p>
+<p>可以改善老年人使用智能手机中出现的大部分障碍</p>
+<p>但有些复杂的功能时常让老年人感到无所适从</p>
+<p>版本改进依然需要</p>
+<p>适合老人，对老人实用才是最好的</p>
+</div>
+  <div id="def">	<meta charset="utf-8">
+<link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">	<script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/highcharts-3d.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+	<script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+
+<!--
+*************************************************************************
+   Generated by JShare at 2022-03-16 14:00:26
+   From: https://jshare.com.cn/demos/hhhhiT
+*************************************************************************
+ -->
+	<div id="container5" style="height: 450px"></div>
+	<script>
+	var chart = Highcharts.chart('container5', {
+	chart: {
+		type: 'pie',
+		options3d: {
+			enabled: true,
+			alpha: 45
+		}
+	},
+	subtitle: {
+		text: '数据来源：社会问卷调查(单位：百分比)'
+	},
+	title: {
+		text: '老年人认为适老化版本还需改进的地方'
+	},
+		colors: ['#F57F17', '#F9A825', '#FBC02D', '#FDD835', '#FFEB3B', '#fcf16e' ,'#ffce7b'  ,'#ffc20e'],
+	plotOptions: {
+		pie: {
+			innerSize: 100,
+			depth: 45
+		}
+	},
+	series: [{
+		name: '占比',
+		data: [
+			['广告更少', 67.95],
+			['有明确引导', 63.46],
+			['远程协助', 53.21],
+			['视听效果', 51.92],
+			['安全支付', 46.79],
+			['关联子女设备', 39.74],
+			['一键直达服务', 38.46],
+			['验证码易操作', 34.62],
+			['语音交互功能', 32.69],
+			['其他',8.33]
+		]
+	}]
+});</script></div>
+</div>
+
+<div id="f6">
+  <div id="hig"><meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="icon" href="https://static.jianshukeji.com/hcode/images/favicon.ico">
+	<script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/highcharts-3d.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/oldie.js"></script>
+	<script src="https://cdn.highcharts.com.cn/highcharts/modules/cylinder.js"></script>
+
+<!--
+*************************************************************************
+   Generated by JShare at 2022-03-15 12:10:05
+   From: https://jshare.com.cn/public/S0G6WQ
+*************************************************************************
+ -->
+	<div id="container9"></div>
+	<script>
+	Highcharts.chart('container9', {
+	chart: {
+		type: 'cylinder',
+		options3d: {
+			enabled: true,
+			alpha:15,
+			beta: 20,
+			depth: 50,
+			viewDistance: 30
+		}
+	},
+	title: {
+		text: '您觉得对老年人最好的关怀是什么'
+	},
+	subtitle: {
+		text: '数据来源：社会问卷调查'
+	},
+	colors: ['#F57F17', '#F9A825', '#FBC02D', '#FDD835', '#FFEB3B', '#fcf16e' ,'#ffce7b' ],
+	plotOptions: {
+		series: {
+			depth: 35,
+			colorByPoint: true
+		}
+	},
+	xAxis: [{
+		categories: [
+			'每天一通电话', '帮老年人干活', '节假日回家探望', '看老年养生节目', '给老年人买东西', '关爱身边其他老人','其他'
+		],
+		crosshair: true
+	}],
+	yAxis: {
+		min: 0,
+		max: 100,
+		title: null
+	},
+	series: [{
+		data: [67.66, 70.65,86.07, 21.39,57.71, 31.84, 11.94,],
+		name: '百分之',
+		showInLegend: false
+	}]
+});</script></div>
+  <div id="aaa"></p>
+  <p>从键盘到触屏</p>
+  <p>
+从普通模式到关怀模式</p>
+  <p>
+老年人正在努力跨越时代的鸿沟</p>
+  <p>
+向我们靠近</p>
+  <p>
+但是</p>
+  <p>
+老人需要的</p>
+  <p>
+不仅仅是手机上的关怀模式</p>
+  <p>
+更需要的是家人的陪伴</p>
+  <p>
+</div>
+</div>
+<div id="f7">
+  <div id="qqq"> <p>&nbsp;</p>
+  <p>数据来源
+  <p>【1】CNNIC中国互联网络信息中心《第48次中国互联网络发展状况统计报告》</p>
+  <p>【2】CNNIC中国互联网络信息中心《第49次中国互联网络发展状况统计报告》</p>
+  <p>【3】中华人民共和国工业和信息化部</p>
+  
+  <p>【4】社会问卷调查
+  </p>
+  <p>&nbsp;</p>
+  <p>作者：王敏 武娜娜 张浩</p>
+  <p>&nbsp;</p>
+  <p>指导老师：李子韵
+  </p>
+  <p>&nbsp;</p></div>
+  <div id="sss">&copy; 毕业设计 | 版权所有 | 翻版必究 | 隐私保护 | <a href="mailto:3480457443@qq.com">联系我们</a>
+  <p>Copyright&copy;2022 by graduation project com All right reserved</div>
+</div>
+
+<script type="text/javascript">
+var arr = [
+	{id:"f1",name:"首页"},
+	{id:"f2",name:"新媒体比重"},
+	{id:"f3",name:"用机情况"},
+	{id:"f4",name:"老年人态度"},
+	{id:"f5",name:"适老化改革"},
+	{id:"f6",name:"顺应关怀"},
+	{id:"f7",name:"版权区"}
+];
+glt(arr)
+</script>
+
+</body>
+</html>
+  
